@@ -36,6 +36,7 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    #Chama a view product passando slug como argumento
     def get_absolute_url(self):
         return reverse('product', kwargs={'slug': self.slug})
 
