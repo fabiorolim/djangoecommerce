@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 
-from core.views import index, contact, product
+from core.views import index, contact
 from catalog.views import product_list
 from catalog import urls
 
@@ -25,5 +25,5 @@ urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
     path('contato/', contact, name='contact'),
-    path('produtos/', include('catalog.urls'))
+    path('catalogo/', include('catalog.urls'))
 ]
